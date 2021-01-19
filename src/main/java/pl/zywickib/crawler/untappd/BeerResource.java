@@ -75,9 +75,13 @@ public class BeerResource {
         Beer beer = new Beer();
         beer.setAbv(apiBeer.getBeer_abv());
         beer.setDescription(apiBeer.getBeer_description());
-        beer.setIbu(apiBeer.getBeer_ibu());
         beer.setName(apiBeer.getBeer_name());
         beer.setStyle(apiBeer.getBeer_style());
+        if (apiBeer.getBeer_ibu() == 0) {
+            beer.setIbu(null);
+        } else {
+            beer.setIbu(apiBeer.getBeer_ibu());
+        }
 
         beer.setBrewery(breweryDao.findByName(breweryName));
         return beer;
