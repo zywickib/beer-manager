@@ -143,6 +143,25 @@
           </systemPropertyVariables>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.tkit.maven</groupId>
+        <artifactId>tkit-mp-openapi-plugin</artifactId>
+        <version>0.6.0</version>
+        <executions>
+          <execution>
+            <id>openapi</id>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <classesDir>${project.build.outputDirectory}</classesDir>
+              <format>YAML</format>
+              <outputFile>${project.build.outputDirectory}/META-INF/openapi.yaml</outputFile>
+              <propertiesOrdinal>201</propertiesOrdinal>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
   <profiles>
