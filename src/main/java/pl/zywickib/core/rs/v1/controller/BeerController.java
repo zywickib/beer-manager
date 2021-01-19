@@ -60,7 +60,7 @@ public class BeerController {
     @APIResponses({@APIResponse(responseCode = "200",
                                 description = "OK",
                                 content = @Content(mediaType = MediaType.APPLICATION_JSON,
-                                                   schema = @Schema(implementation = Beer[].class))),
+                                                   schema = @Schema(implementation = BeerResultDto[].class))),
                    @APIResponse(responseCode = "400", description = "Bad request"),
                    @APIResponse(responseCode = "404", description = "Not Found"),
                    @APIResponse(responseCode = "500", description = "Internal Server Error")
