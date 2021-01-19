@@ -86,6 +86,27 @@
       <artifactId>quarkus-rest-client</artifactId>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>1.4.1.Final</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct-processor</artifactId>
+      <version>1.4.1.Final</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.tkit.quarkus/tkit-quarkus-rest -->
+    <dependency>
+      <groupId>org.tkit.quarkus</groupId>
+      <artifactId>tkit-quarkus-rest</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+
+
   </dependencies>
   <build>
     <plugins>
@@ -107,6 +128,10 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${compiler-plugin.version}</version>
+        <configuration>
+          <parameters>true</parameters>
+          <compilerArgs>-Amapstruct.defaultComponentModel=cdi</compilerArgs>
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
