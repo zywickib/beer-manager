@@ -20,6 +20,10 @@ public class Brewery extends TraceableEntity {
     private String logo;
 
     @Column(name = "brewery")
-    @OneToMany(mappedBy = "brewery", cascade = CascadeType.PERSIST, orphanRemoval = true)
+    @OneToMany(mappedBy = "brewery", cascade = {
+        CascadeType.PERSIST,
+        CascadeType.MERGE,
+        CascadeType.ALL
+    }, orphanRemoval = true)
     private Set<Beer> beer;
 }
