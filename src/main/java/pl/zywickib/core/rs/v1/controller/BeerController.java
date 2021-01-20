@@ -68,7 +68,7 @@ public class BeerController {
 
     @GET
     @Path("")
-    @Operation(operationId = "getAllBeers", description = "Get beer by guid")
+    @Operation(operationId = "getAllBeers", description = "Get all beers")
     @APIResponses({@APIResponse(responseCode = "200",
                                 description = "OK",
                                 content = @Content(mediaType = MediaType.APPLICATION_JSON,
@@ -84,7 +84,7 @@ public class BeerController {
 
     @POST
     @Path("")
-    @Operation(operationId = "addNewBeer", description = "Get beer by guid")
+    @Operation(operationId = "addNewBeer", description = "Add beer")
     @APIResponses({@APIResponse(responseCode = "200",
                                 description = "OK",
                                 content = @Content(mediaType = MediaType.APPLICATION_JSON,
@@ -107,7 +107,7 @@ public class BeerController {
 
     @DELETE
     @Path("{guid}")
-    @Operation(operationId = "getBeerByGuid", description = "Get beer by guid")
+    @Operation(operationId = "getBeerByGuid", description = "Delete beer")
     @APIResponses({@APIResponse(responseCode = "204", description = "No Content"),
                    @APIResponse(responseCode = "400", description = "Bad request"),
                    @APIResponse(responseCode = "404", description = "Not Found"),
@@ -125,7 +125,7 @@ public class BeerController {
 
     @PUT
     @Path("{guid}")
-    @Operation(operationId = "updateBeerByGuid", description = "Get beer by guid")
+    @Operation(operationId = "updateBeerByGuid", description = "Update Beer")
     @APIResponses({@APIResponse(responseCode = "200",
                                 description = "OK",
                                 content = @Content(mediaType = MediaType.APPLICATION_JSON,
