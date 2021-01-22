@@ -107,7 +107,7 @@ public class BeerController {
 
     @DELETE
     @Path("{guid}")
-    @Operation(operationId = "getBeerByGuid", description = "Delete beer")
+    @Operation(operationId = "deleteBeerByGuid", description = "Delete beer")
     @APIResponses({@APIResponse(responseCode = "204", description = "No Content"),
                    @APIResponse(responseCode = "400", description = "Bad request"),
                    @APIResponse(responseCode = "404", description = "Not Found"),
